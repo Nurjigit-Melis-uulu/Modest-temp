@@ -1,7 +1,21 @@
-const menuButton = document.querySelector("#menu-button");
+let menuButton = document.querySelector("#menu-button");
 let drawer = document.querySelector("nav .drawer");
 let boll = false;
 let backDrop = document.querySelector(".back-drop");
+let carouselSlides = document.querySelectorAll("header ul li");
+let carouselButtons = document.querySelectorAll("header .controls button");
+
+for (let i = 0; i < carouselButtons.length; i++) {
+  const button = carouselButtons[i];
+  button.addEventListener("click", function() {
+    carouselButtons.forEach(b => (b.className = ""));
+    this.className = "active";
+    for (let index = 0; index < carouselSlides.length; index++) {
+      carouselSlides[index].className = "";
+      carouselSlides[i].className = "active";
+    }
+  });
+}
 
 backDrop.addEventListener("click", function() {
   drawer.style.transform = "translate(-100%)";
