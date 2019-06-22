@@ -191,6 +191,7 @@ header .content section {
   flex-flow: column;
   justify-content: center;
   align-items: flex-start;
+  color: white;
 }
 
 header .controls {
@@ -206,8 +207,28 @@ header .controls {
   background: transparent;
   border-radius: 50%;
   outline: none;
+  transition: background .4s;
 }
 
 .controls button.active {
   background: white;
+}
+
+header div[class^="bg-"] {
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 100%;
+}
+
+.bg-1 {
+  background: url(../assets/images/bg-3.jpg);
+}
+
+.bg-2 {
+  background: url(../assets/images/bg-2.jpg);
+}
+
+.bg-3 {
+  background: url(../assets/images/bg-1.jpg);
 }
