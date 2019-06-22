@@ -1,0 +1,164 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+
+body {
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  padding-top: 60px;
+}
+
+nav {
+  width: 100%;
+  height: 60px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 99;
+  background: #1D2126;
+  display: flex;
+  justify-content: center;
+}
+
+.nav-box {
+  width: 80%;
+  height: inherit;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+nav ul {
+  height: inherit;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  list-style: none;
+}
+
+nav ul li a {
+  text-transform: uppercase;
+  font-size: .8em;
+  display: block;
+  padding: 4px 5px;
+  text-decoration: none;
+  color: #9FA9A8;
+  margin-left: 20px;
+}
+
+nav ul li a:hover {
+  border: 2px solid #9FA9A8;
+  border-radius: 6px;
+  margin: 0 -2px 0 18px;
+}
+
+nav ul li a.active {
+  color: #23B7A4;
+  border: 2px solid #23B7A4;
+  border-radius: 6px;
+  margin: 0 -2px 0 18px;
+}
+
+.logo {
+  color: white;
+}
+
+nav button {
+  width: 40px;
+  height: 40px;
+  border: 0;
+  background: transparent;
+  display: none;
+  outline: none;
+}
+
+nav button .line {
+  width: 100%;
+  height: 3px;
+  background: white;
+  display: block;
+  margin: 5px 0;
+}
+
+nav .drawer {
+  display: none;
+  transform: translateX(-100%);
+  transition: transform 0.6s;
+}
+
+nav .drawer ul li {
+  margin: 0 10px;
+}
+
+nav .back-drop {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: #00000066;
+  z-index: 10;
+}
+
+@media (max-width: 800px) {
+  nav ul {
+    display: none;
+  }
+
+  nav button {
+    display: block;
+  }
+
+  nav .drawer {
+    display: block;
+    width: 160px;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: #16263f;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 11;
+  }
+
+  nav .drawer ul {
+    width: 140px;
+    display: flex;
+    flex-flow: column;
+  }
+}
+
+header {
+  width: 100%;
+  height: 600px;
+}
+
+header .carousel {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  list-style: none;
+}
+
+header .carousel li {
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0;
+}
+
+header .carousel li img {
+  width: 100%;
+  height: 100%;
+}
+
+header .carousel li.active {
+  opacity: 1;
+}
