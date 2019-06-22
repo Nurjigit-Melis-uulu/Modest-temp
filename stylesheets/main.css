@@ -4,11 +4,7 @@ body {
   font-family: "Roboto", sans-serif;
   margin: 0;
   padding-top: 60px;
-}
-
-* {
-  margin: 0;
-  padding: 0;
+  color: gray;
 }
 
 h1,
@@ -41,6 +37,8 @@ nav {
 }
 
 nav ul {
+  margin: 0;
+  padding: 0;
   height: inherit;
   display: flex;
   justify-content: space-around;
@@ -138,6 +136,8 @@ nav .back-drop {
   }
 
   nav .drawer ul {
+    margin: 0;
+    padding: 0;
     width: 140px;
     display: flex;
     flex-flow: column;
@@ -152,6 +152,8 @@ header {
 }
 
 header .carousel {
+  margin: 0;
+  padding: 0;
   width: 100%;
   height: 100%;
   position: relative;
@@ -178,7 +180,7 @@ header .carousel li.active {
   opacity: .6;
 }
 
-header .content {
+header .header-content {
   width: 80%;
   height: 100%;
   position: absolute;
@@ -187,7 +189,7 @@ header .content {
   z-index: 90;
 }
 
-header .content .box {
+header .header-content .box {
   width: 100%;
   height: 100%;
   display: flex;
@@ -195,7 +197,7 @@ header .content .box {
   position: relative;
 }
 
-header .content section {
+header .header-content section {
   width: 50%;
   height: 100%;
   display: flex;
@@ -233,13 +235,55 @@ header div[class^="bg-"] {
 }
 
 .bg-1 {
-  background: url(../assets/images/bg-3.jpg);
+  background: url(../images/bg-3.jpg);
 }
 
 .bg-2 {
-  background: url(../assets/images/bg-2.jpg);
+  background: url(../images/bg-2.jpg);
 }
 
 .bg-3 {
-  background: url(../assets/images/bg-1.jpg);
+  background: url(../images/bg-1.jpg);
+}
+
+header h1,
+header p {
+  margin: 0 0 20px;
+}
+
+header section>div {
+  display: flex;
+}
+
+header section button {
+  width: 100px;
+  height: 30px;
+  background: transparent;
+  color: white;
+  border: 2px solid white;
+  border-radius: 4px;
+  margin-right: 10px;
+  outline: none;
+}
+
+header section button:hover {
+  background: #23B7A4;
+  border-color: #23B7A4;
+}
+
+.container {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+}
+
+.container .content {
+  margin-top: 40px;
+  width: 80%;
+}
+
+.content h2 {
+  color: #292F36;
+  border-left: 10px solid silver;
+  padding-left: 10px;
 }
