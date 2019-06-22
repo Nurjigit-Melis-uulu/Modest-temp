@@ -280,10 +280,28 @@ header section button:hover {
 .container .content {
   margin-top: 40px;
   width: 80%;
+  height: 200vh;
 }
 
 .content h2 {
   color: #292F36;
   border-left: 10px solid silver;
   padding-left: 10px;
+}
+
+.links-to-social a {
+  text-decoration: none;
+  display: inline-block;
+  color: white;
+  background: silver;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  margin: 0 -3px 0 0;
+  font-size: 1.2em;
+}
+
+.links-to-social a:hover {
+  opacity: .6;
 }
