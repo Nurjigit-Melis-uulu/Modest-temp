@@ -277,7 +277,7 @@ header section>div {
   width: 80%;
 }
 
-.content h2 {
+.container h2 {
   color: #292F36;
   border-left: 10px solid silver;
   padding-left: 10px;
@@ -429,8 +429,13 @@ header section>div {
   }
 }
 
-#portfolio {
+#portfolio,
+#features {
+  color: white;
   background: #3A454D;
+}
+
+#portfolio {
   display: flex;
   flex-flow: column;
   align-items: center;
@@ -498,4 +503,47 @@ img {
 
 .item {
   text-align: center;
+}
+
+.contacts {
+  display: flex;
+}
+
+.contact-info {
+  width: 50%;
+}
+
+.contact-form {
+  width: 50%;
+  margin-top: -150px;
+  z-index: 99;
+  background: #fff;
+  padding: 30px;
+  box-sizing: border-box;
+}
+
+form {
+  width: 100%;
+  display: flex;
+  flex-flow: wrap;
+  justify-content: space-between;
+}
+
+form label {
+  width: calc(50% - 20px);
+  display: flex;
+  flex-flow: column;
+  margin: 0 0 20px;
+}
+
+form label input {
+  width: 100%;
+  border: none;
+  padding: 10px 5px;
+  border-radius: 6px;
+  background: #EAEEF1;
+}
+
+form textarea {
+  width: 100%;
 }
