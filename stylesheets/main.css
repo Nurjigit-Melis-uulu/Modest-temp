@@ -257,7 +257,7 @@ header section>div {
   color: white;
   border: 2px solid white;
   border-radius: 4px;
-  margin-right: 10px;
+  margin: 10px 10px 10px 0;
   outline: none;
 }
 
@@ -275,6 +275,7 @@ header section>div {
 .container .content {
   margin-top: 40px;
   width: 80%;
+  padding: 40px 0;
 }
 
 .container h2 {
@@ -332,41 +333,15 @@ header section>div {
   margin: 1em 0;
 }
 
-@media (max-width: 900px) {
-  .about {
-    display: block;
-  }
-
-  .about section {
-    width: 100%;
-  }
-}
-
-@media (max-width: 400px) {
-  .number {
-    display: none;
-  }
-
-  .goal article {
-    width: 100%;
-  }
-
-  .member {
-    width: 100%;
-    margin: 10px;
-  }
-}
-
 .our-team {
   width: 100%;
-  display: flex;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 2fr));
+  grid-gap: 1rem;
 }
 
 .member {
-  min-width: 200px;
-  width: calc(50% - 40px);
-  margin: 20px;
+  margin: 10px;
 }
 
 .image {
@@ -431,17 +406,11 @@ header section>div {
 
 #portfolio,
 #features {
-  color: white;
   background: #3A454D;
 }
 
-#portfolio {
-  display: flex;
-  flex-flow: column;
-  align-items: center;
-}
-
-#portfolio h2 {
+#portfolio h2,
+#features h2 {
   color: white;
 }
 
@@ -505,21 +474,31 @@ img {
   text-align: center;
 }
 
+.show {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
 .contacts {
   display: flex;
+  flex-flow: wrap;
 }
 
 .contact-info {
   width: 50%;
+  min-width: 320px;
 }
 
 .contact-form {
+  min-width: 320px;
   width: 50%;
-  margin-top: -150px;
-  z-index: 99;
+  margin-top: -170px;
+  z-index: 2;
   background: #fff;
   padding: 30px;
   box-sizing: border-box;
+  box-shadow: 2px -2px 4px rgba(0, 0, 0, 0.2);
 }
 
 form {
@@ -542,8 +521,93 @@ form label input {
   padding: 10px 5px;
   border-radius: 6px;
   background: #EAEEF1;
+  box-sizing: border-box;
 }
 
-form textarea {
+.message {
   width: 100%;
+}
+
+.message textarea {
+  width: 100%;
+  border: none;
+  padding: 10px 5px;
+  border-radius: 6px;
+  background: #EAEEF1;
+  resize: vertical;
+  max-height: 400px;
+  min-height: 100px;
+  box-sizing: border-box;
+}
+
+.submit {
+  min-width: 100px;
+  height: 30px;
+  color: white;
+  border: 2px solid #23B7A4;
+  border-radius: 4px;
+  margin: 20px 0;
+  outline: none;
+  background: #23B7A4;
+}
+
+@media (max-width: 900px) {
+  .about {
+    display: block;
+  }
+
+  .about section {
+    width: 100%;
+  }
+
+  .contact-info {
+    width: 100%;
+  }
+
+  .contact-form {
+    width: 100%;
+    margin: 0;
+    box-shadow: none;
+  }
+
+  .container div.content {
+    width: 95%;
+  }
+}
+
+@media (max-width: 400px) {
+  .number {
+    display: none;
+  }
+
+  .goal article {
+    width: 100%;
+  }
+
+  form label {
+    width: 100%;
+  }
+}
+
+@media (max-width: 600px) {
+  footer {
+    justify-content: center;
+    align-items: center;
+    flex-flow: column;
+    text-align: center;
+  }
+
+  footer div {
+    margin: 20px 0;
+  }
+}
+
+footer {
+  width: 100%;
+  background: #3A454D;
+  color: white;
+  display: flex;
+  padding: 40px;
+  box-sizing: border-box;
+  justify-content: space-between;
 }
