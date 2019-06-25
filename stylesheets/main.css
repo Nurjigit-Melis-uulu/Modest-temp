@@ -171,11 +171,6 @@ header .carousel li {
   transition: opacity .4s;
 }
 
-header .carousel li img {
-  width: 100%;
-  height: 100%;
-}
-
 header .carousel li.active {
   opacity: .6;
 }
@@ -255,8 +250,8 @@ header section>div {
   display: flex;
 }
 
-header section button {
-  width: 100px;
+.btn {
+  min-width: 100px;
   height: 30px;
   background: transparent;
   color: white;
@@ -266,7 +261,7 @@ header section button {
   outline: none;
 }
 
-header section button:hover {
+.btn:hover {
   background: #23B7A4;
   border-color: #23B7A4;
 }
@@ -280,7 +275,6 @@ header section button:hover {
 .container .content {
   margin-top: 40px;
   width: 80%;
-  height: 200vh;
 }
 
 .content h2 {
@@ -304,4 +298,204 @@ header section button:hover {
 
 .links-to-social a:hover {
   opacity: .6;
+}
+
+.goal {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+
+.goal article {
+  width: calc(100% - 80px)
+}
+
+.number {
+  width: 40px;
+  height: 40px;
+  background: #23B7A4;
+  color: white;
+  text-align: center;
+  line-height: 40px;
+}
+
+.about {
+  display: flex;
+}
+
+.about section {
+  width: 50%;
+}
+
+.goal h4,
+.number {
+  margin: 1em 0;
+}
+
+@media (max-width: 900px) {
+  .about {
+    display: block;
+  }
+
+  .about section {
+    width: 100%;
+  }
+}
+
+@media (max-width: 400px) {
+  .number {
+    display: none;
+  }
+
+  .goal article {
+    width: 100%;
+  }
+
+  .member {
+    width: 100%;
+    margin: 10px;
+  }
+}
+
+.our-team {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.member {
+  min-width: 200px;
+  width: calc(50% - 40px);
+  margin: 20px;
+}
+
+.image {
+  width: 100%;
+  height: 240px;
+  overflow: hidden;
+  position: relative;
+}
+
+.image img {
+  transition: transform .6s;
+}
+
+.member:hover img {
+  transform: scale(1.1);
+}
+
+.member-contacts {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  background: rgba(255, 255, 255, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: opacity .6s;
+}
+
+.member-contacts .links-to-social a {
+  background: #3A454D;
+}
+
+.member:hover .member-contacts {
+  opacity: 1;
+}
+
+.info {
+  background: #E1E6EA;
+  box-sizing: border-box;
+  padding: 10px;
+}
+
+.info h4,
+.info p {
+  margin: 0;
+}
+
+.member:hover .info {
+  background: #3A454D;
+  color: white;
+}
+
+@media (max-width: 1150px) {
+  .our-team {
+    flex-flow: wrap;
+    justify-content: space-between;
+  }
+}
+
+#portfolio {
+  background: #3A454D;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+}
+
+#portfolio h2 {
+  color: white;
+}
+
+.works {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-gap: 2rem;
+}
+
+.work {
+  position: relative;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+}
+
+.work-hover {
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.5);
+  transition: opacity .6s;
+}
+
+.work:hover .work-hover {
+  opacity: 1;
+  color: white;
+}
+
+.work-name {
+  width: 100%;
+  height: 40px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  box-sizing: border-box;
+  padding: 0 10px;
+  background: #292F36;
+  line-height: 40px;
+  color: white;
+}
+
+.services,
+.features {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-gap: 2rem;
+}
+
+.item {
+  text-align: center;
 }
