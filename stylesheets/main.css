@@ -470,6 +470,12 @@ img {
   grid-gap: 2rem;
 }
 
+.services i {
+  font-size: 3.2em;
+  color: #0EA9A1;
+  a
+}
+
 .item {
   text-align: center;
 }
@@ -487,11 +493,11 @@ img {
 
 .contact-info {
   width: 50%;
-  min-width: 320px;
+  min-width: 300px;
 }
 
 .contact-form {
-  min-width: 320px;
+  min-width: 300px;
   width: 50%;
   margin-top: -170px;
   z-index: 2;
@@ -560,6 +566,10 @@ form label input {
     width: 100%;
   }
 
+  form label {
+    align-items: center;
+  }
+
   .contact-info {
     width: 100%;
   }
@@ -567,11 +577,30 @@ form label input {
   .contact-form {
     width: 100%;
     margin: 0;
+    padding: 0;
     box-shadow: none;
+  }
+
+  .contact-form input {
+    width: 90%;
+  }
+
+  .message {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+  }
+
+  .message textarea {
+    width: 90%;
   }
 
   .container div.content {
     width: 95%;
+  }
+
+  .contact-form form button {
+    margin: 20px auto;
   }
 }
 
