@@ -333,12 +333,21 @@ header section>div {
   width: 100%;
   display: flex;
   box-sizing: border-box;
-  padding: 37px 26px;
   justify-content: space-around;
 }
 
 .goal article {
   width: calc(100% - 80px)
+}
+
+.goal article h4 {
+  margin: 0;
+  line-height: 13px;
+}
+
+.about .goal article>p {
+  margin-top: 13px;
+  line-height: 27px;
 }
 
 .number {
@@ -359,12 +368,14 @@ header section>div {
 }
 
 .about section p {
-  line-height: 26px;
-  margin: 27px 0;
+  margin: 31px 0;
+  line-height: 25px;
 }
 
 .about .our-goals {
   width: 43%;
+  box-sizing: border-box;
+  padding: 37px 0 0 26px;
 }
 
 .our-team {
