@@ -409,6 +409,10 @@ header section>div {
   background: #3A454D;
 }
 
+#features {
+  color: #FDFDFD;
+}
+
 #portfolio h2,
 #features h2 {
   color: white;
@@ -471,12 +475,12 @@ img {
 }
 
 .services i {
-  font-size: 3.2em;
+  font-size: 2.5em;
   color: #0EA9A1;
-  a
 }
 
 .item {
+  margin: 10px 0;
   text-align: center;
 }
 
@@ -636,7 +640,11 @@ footer {
   background: #3A454D;
   color: white;
   display: flex;
-  padding: 40px;
+  padding: 20px 40px;
   box-sizing: border-box;
   justify-content: space-between;
+}
+
+footer i {
+  margin: 0 5px;
 }
