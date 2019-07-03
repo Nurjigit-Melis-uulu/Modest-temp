@@ -4,6 +4,7 @@ let boll = false;
 let backDrop = document.querySelector(".back-drop");
 let carouselSlides = document.querySelectorAll("header ul li");
 let carouselButtons = document.querySelectorAll("header .controls button");
+const anchors = document.querySelectorAll('a[href*="#"]');
 
 for (let i = 0; i < carouselButtons.length; i++) {
   const button = carouselButtons[i];
@@ -32,3 +33,16 @@ menuButton.addEventListener("click", function() {
     drawer.style.transform = "translate(-100%)";
   }
 });
+
+for (let anchor of anchors) {
+  anchor.addEventListener("click", function(e) {
+    e.preventDefault();
+
+    const blockID = anchor.getAttribute("href");
+
+    document.querySelector("" + blockID).scrollIntoView({
+      behavior: "smooth",
+      block: "start"
+    });
+  });
+}
