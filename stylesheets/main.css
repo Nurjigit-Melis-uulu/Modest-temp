@@ -141,6 +141,11 @@ nav .back-drop {
     width: 140px;
     display: flex;
     flex-flow: column;
+    justify-content: center;
+  }
+
+  nav .drawer ul li {
+    margin: 10px 0;
   }
 }
 
@@ -481,6 +486,7 @@ img {
 
 .item {
   margin: 10px 0;
+  text-transform: uppercase;
   text-align: center;
 }
 
