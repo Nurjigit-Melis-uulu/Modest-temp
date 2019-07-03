@@ -1,15 +1,19 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
-
 body {
-  font-family: "Roboto", sans-serif;
+  font-family: 'Open Sans', sans-serif;
   margin: 0;
   padding-top: 60px;
   color: gray;
 }
 
+:root {
+  --main-width: 1142px;
+  --main-content-left-width: 57%;
+}
+
 h1,
 h2 {
   text-transform: uppercase;
+  font-size: 2em;
 }
 
 button {
@@ -18,7 +22,7 @@ button {
 
 nav {
   width: 100%;
-  height: 60px;
+  height: 80px;
   position: fixed;
   top: 0;
   left: 0;
@@ -29,7 +33,7 @@ nav {
 }
 
 .nav-box {
-  width: 80%;
+  width: var(--main-width);
   height: inherit;
   display: flex;
   align-items: center;
@@ -37,40 +41,42 @@ nav {
 }
 
 nav ul {
-  margin: 0;
+  width: 615px;
+  margin: 0 19px;
   padding: 0;
   height: inherit;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   list-style: none;
 }
 
+nav ul li {}
+
 nav ul li a {
   text-transform: uppercase;
-  font-size: .8em;
+  font-size: .9em;
   display: block;
-  padding: 4px 5px;
+  padding: 4px 9px;
   text-decoration: none;
   color: #9FA9A8;
-  margin-left: 20px;
+  border: 2px solid transparent;
 }
 
 nav ul li a:hover {
-  border: 2px solid #9FA9A8;
+  border-color: #9FA9A8;
   border-radius: 6px;
-  margin: 0 -2px 0 18px;
 }
 
 nav ul li a.active {
   color: #23B7A4;
   border: 2px solid #23B7A4;
   border-radius: 6px;
-  margin: 0 -2px 0 18px;
 }
 
 .logo {
   color: white;
+  margin: 0;
 }
 
 nav button {
@@ -151,7 +157,7 @@ nav .back-drop {
 
 header {
   width: 100%;
-  height: 400px;
+  height: 679px;
   position: relative;
   background: linear-gradient(135deg, rgb(6, 2, 53), rgb(108, 107, 172))
 }
@@ -181,10 +187,10 @@ header .carousel li.active {
 }
 
 header .header-content {
-  width: 80%;
+  width: var(--main-width);
   height: 100%;
   position: absolute;
-  left: 10%;
+  left: calc(50% - (var(--main-width) / 2));
   top: 0;
   z-index: 90;
 }
@@ -194,17 +200,18 @@ header .header-content .box {
   height: 100%;
   display: flex;
   justify-content: space-between;
+  align-items: center;
   position: relative;
 }
 
 header .header-content section {
-  width: 50%;
-  height: 100%;
-  display: flex;
-  flex-flow: column;
-  justify-content: center;
-  align-items: flex-start;
+  width: var(--main-content-left-width);
+  height: 145px;
   color: white;
+}
+
+header .header-content section div {
+  margin: 25px 0 0;
 }
 
 header .controls {
@@ -246,9 +253,12 @@ header div[class^="bg-"] {
   background: url(../images/bg-1.jpg);
 }
 
-header h1,
+header h1 {
+  margin: -31px 0 0;
+}
+
 header p {
-  margin: 0 0 20px;
+  line-height: 27px;
 }
 
 header section>div {
@@ -256,8 +266,8 @@ header section>div {
 }
 
 .btn {
-  min-width: 100px;
-  height: 30px;
+  min-width: 125px;
+  height: 45px;
   background: transparent;
   color: white;
   border: 2px solid white;
@@ -278,15 +288,18 @@ header section>div {
 }
 
 .container .content {
-  margin-top: 40px;
-  width: 80%;
+  margin-top: 9px;
+  width: var(--main-width);
   padding: 40px 0;
 }
 
 .container h2 {
+  line-height: 34px;
+  height: 33px;
   color: #292F36;
   border-left: 10px solid silver;
   padding-left: 10px;
+  margin-top: 32px;
 }
 
 .links-to-social a {
@@ -330,7 +343,16 @@ header section>div {
 }
 
 .about section {
-  width: 50%;
+  width: var(--main-content-left-width);
+}
+
+.about section p {
+  line-height: 26px;
+  margin: 27px 0;
+}
+
+.about .our-goals {
+  width: 43%;
 }
 
 .goal h4,
