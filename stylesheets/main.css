@@ -12,8 +12,14 @@ body {
 
 h1,
 h2 {
-  text-transform: uppercase;
   font-size: 2em;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  text-transform: uppercase;
 }
 
 button {
@@ -302,14 +308,18 @@ header section>div {
   margin-top: 32px;
 }
 
+.links-to-social {
+  margin: 49px 0 0;
+}
+
 .links-to-social a {
   text-decoration: none;
   display: inline-block;
   color: white;
   background: silver;
-  width: 40px;
-  height: 40px;
-  line-height: 40px;
+  width: 60px;
+  height: 60px;
+  line-height: 60px;
   text-align: center;
   margin: 0 -3px 0 0;
   font-size: 1.2em;
@@ -322,6 +332,8 @@ header section>div {
 .goal {
   width: 100%;
   display: flex;
+  box-sizing: border-box;
+  padding: 37px 26px;
   justify-content: space-around;
 }
 
@@ -330,12 +342,12 @@ header section>div {
 }
 
 .number {
-  width: 40px;
-  height: 40px;
+  width: 50px;
+  height: 50px;
   background: #23B7A4;
   color: white;
   text-align: center;
-  line-height: 40px;
+  line-height: 50px;
 }
 
 .about {
@@ -353,11 +365,6 @@ header section>div {
 
 .about .our-goals {
   width: 43%;
-}
-
-.goal h4,
-.number {
-  margin: 1em 0;
 }
 
 .our-team {
