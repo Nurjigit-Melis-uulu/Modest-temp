@@ -193,7 +193,7 @@ header .carousel li.active {
 }
 
 header .header-content {
-  width: var(--main-width);
+  max-width: var(--main-width);
   height: 100%;
   position: absolute;
   left: calc(50% - (var(--main-width) / 2));
@@ -380,7 +380,7 @@ header section>div {
 
 .our-team {
   width: 100%;
-  margin: 60px 0 0;
+  margin: 60px 0;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(240px, 263px));
   grid-gap: 30px;
@@ -475,6 +475,7 @@ header section>div {
 
 .works {
   width: 100%;
+  margin: 60px 0 0;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   grid-gap: 2rem;
@@ -482,6 +483,8 @@ header section>div {
 
 .work {
   position: relative;
+  width: 100%;
+  height: 266px;
 }
 
 img {
@@ -497,10 +500,16 @@ img {
   left: 0;
   top: 0;
   display: flex;
-  justify-content: center;
+  flex-flow: column;
+  justify-content: space-between;
   align-items: center;
   background: rgba(0, 0, 0, 0.5);
   transition: opacity .6s;
+}
+
+.work-hover i {
+  margin: 92px 0 0;
+  font-size: 1.5em;
 }
 
 .work:hover .work-hover {
@@ -510,10 +519,7 @@ img {
 
 .work-name {
   width: 100%;
-  height: 40px;
-  position: absolute;
-  bottom: 0;
-  left: 0;
+  height: 60px;
   box-sizing: border-box;
   padding: 0 10px;
   background: #292F36;
@@ -521,29 +527,52 @@ img {
   color: white;
 }
 
+.work-name h4 {
+  font-weight: normal;
+  height: 60px;
+  line-height: 60px;
+  margin: 0;
+  width: 100%;
+  padding-left: 10px;
+  box-sizing: border-box;
+}
+
 .services,
 .features {
   width: 100%;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(205px, 1fr));
   grid-gap: 2rem;
 }
 
+.services {
+  margin: 63px 0;
+}
+
 .services i {
-  font-size: 2.5em;
+  margin: 10px 0;
+  font-size: 3.2em;
   color: #0EA9A1;
 }
 
 .item {
-  margin: 10px 0;
-  text-transform: uppercase;
+  margin: 25px 0;
   text-align: center;
+}
+
+.item h3 {
+  text-transform: uppercase;
 }
 
 .show {
   width: 100%;
   display: flex;
   justify-content: center;
+}
+
+.show .btn {
+  margin: 55px auto 20px;
+  padding: 0 19px;
 }
 
 .contacts {
