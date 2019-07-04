@@ -380,18 +380,17 @@ header section>div {
 
 .our-team {
   width: 100%;
+  margin: 60px 0 0;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 2fr));
-  grid-gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 263px));
+  grid-gap: 30px;
 }
 
-.member {
-  margin: 10px;
-}
+.member {}
 
 .image {
   width: 100%;
-  height: 240px;
+  height: 300px;
   overflow: hidden;
   position: relative;
 }
@@ -418,8 +417,19 @@ header section>div {
   transition: opacity .6s;
 }
 
+.member-contacts .links-to-social {
+  margin: 0;
+  display: flex;
+}
+
 .member-contacts .links-to-social a {
   background: #3A454D;
+  width: 50px;
+  background: #3A454D;
+  height: 50px;
+  line-height: 50px;
+  margin: 0;
+  display: block;
 }
 
 .member:hover .member-contacts {
@@ -429,7 +439,7 @@ header section>div {
 .info {
   background: #E1E6EA;
   box-sizing: border-box;
-  padding: 10px;
+  padding: 15px;
 }
 
 .info h4,
