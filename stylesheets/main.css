@@ -8,6 +8,7 @@ body {
 :root {
   --main-width: 1142px;
   --main-content-left-width: 57%;
+  --width-of-our-goals: 43%;
 }
 
 h1,
@@ -373,7 +374,7 @@ header section>div {
 }
 
 .about .our-goals {
-  width: 43%;
+  width: var(--width-of-our-goals);
   box-sizing: border-box;
   padding: 37px 0 0 26px;
 }
@@ -671,7 +672,26 @@ form label input {
   background: #23B7A4;
 }
 
+@media (max-width: 1200px) {
+  :root {
+    --main-width: 80%;
+    --main-content-left-width: 50%;
+    --width-of-our-goals: 50%;
+  }
+}
+
+@media (max-width: 1000px) {
+  :root {
+    --main-content-left-width: 50%;
+  }
+}
+
 @media (max-width: 900px) {
+  :root {
+    --main-content-left-width: 100%;
+    --width-of-our-goals: 100%;
+  }
+
   .about {
     display: block;
   }
@@ -723,6 +743,10 @@ form label input {
     display: none;
   }
 
+  #about .our-goals {
+    padding: 40px 10px;
+  }
+
   .goal article {
     width: 100%;
   }
@@ -733,11 +757,12 @@ form label input {
 }
 
 @media (max-width: 600px) {
-  footer {
+  body footer {
     justify-content: center;
     align-items: center;
     flex-flow: column;
     text-align: center;
+    height: 200px;
   }
 
   footer div {
