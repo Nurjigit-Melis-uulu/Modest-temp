@@ -40,9 +40,16 @@ for (let anchor of anchors) {
 
     const blockID = anchor.getAttribute("href");
 
-    document.querySelector("" + blockID).scrollIntoView({
-      behavior: "smooth",
-      block: "start"
-    });
+    if (anchor.getAttribute("href") === "#") {
+      document.querySelector("body").scrollIntoView({
+        behavior: "smooth",
+        block: "start"
+      });
+    } else {
+      document.querySelector("" + blockID).scrollIntoView({
+        behavior: "smooth",
+        block: "start"
+      });
+    }
   });
 }
