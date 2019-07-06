@@ -788,6 +788,11 @@ footer {
   justify-content: space-between;
 }
 
+footer a {
+  text-decoration: none;
+  color: white;
+}
+
 footer i {
   margin: 0 5px;
 }
