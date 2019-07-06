@@ -5,6 +5,10 @@ body {
   color: gray;
 }
 
+* {
+  box-sizing: border-box;
+}
+
 :root {
   --main-width: 1142px;
   --main-content-left-width: 57%;
@@ -21,6 +25,7 @@ h2,
 h3,
 h4 {
   text-transform: uppercase;
+  font-weight: 400;
 }
 
 button {

@@ -5,6 +5,7 @@ let backDrop = document.querySelector(".back-drop");
 let carouselSlides = document.querySelectorAll("header ul li");
 let carouselButtons = document.querySelectorAll("header .controls button");
 const anchors = document.querySelectorAll('a[href*="#"]');
+const links = document.querySelectorAll(".nav-box a");
 
 for (let i = 0; i < carouselButtons.length; i++) {
   const button = carouselButtons[i];
@@ -50,6 +51,14 @@ for (let anchor of anchors) {
         behavior: "smooth",
         block: "start"
       });
+    }
+
+    for (let link of links) {
+      if (link.getAttribute("href") === blockID) {
+        link.className = "active";
+      } else {
+        link.className = "";
+      }
     }
   });
 }
