@@ -230,15 +230,17 @@ header .controls {
   position: absolute;
   right: 105px;
   bottom: 30px;
+  display: flex;
 }
 
 .controls button {
   width: 14px;
-  height: 14px;
+  height: 12px;
   border: 2px solid white;
   background: transparent;
-  border-radius: 50%;
+  border-radius: 100%;
   outline: none;
+  margin: 0 2px;
   transition: background .4s;
 }
 
