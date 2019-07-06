@@ -228,7 +228,7 @@ header .header-content section div {
 
 header .controls {
   position: absolute;
-  right: 0;
+  right: 105px;
   bottom: 30px;
 }
 
