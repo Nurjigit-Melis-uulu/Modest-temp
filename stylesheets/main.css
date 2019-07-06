@@ -799,7 +799,6 @@ footer i {
 
 hr {
   margin: 58px 0 0 0;
-  background: silver;
-  height: 1px;
+  background: rgb(212, 212, 212);
   width: 100%;
 }
