@@ -436,7 +436,7 @@ header section>div {
   background: #3A454D;
   height: 50px;
   line-height: 50px;
-  margin: 0;
+  margin: 0 1px 0 0;
   display: block;
 }
 
@@ -782,7 +782,7 @@ footer {
   background: #3A454D;
   color: white;
   display: flex;
-  padding: 20px 40px;
+  padding: 20px 100px;
   align-items: center;
   margin: 54px 0 0;
   box-sizing: border-box;
