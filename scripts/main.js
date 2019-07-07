@@ -4,6 +4,7 @@ let boll = false;
 let backDrop = document.querySelector(".back-drop");
 let carouselSlides = document.querySelectorAll("header ul li");
 let carouselButtons = document.querySelectorAll(".controls button");
+let header = document.querySelector("header");
 const anchors = document.querySelectorAll('a[href*="#"]');
 const workLinks = document.querySelectorAll('a[href*="?work_"]');
 const links = document.querySelectorAll(".nav-box a");
@@ -69,3 +70,34 @@ for (const workLink of workLinks) {
     event.preventDefault();
   });
 }
+
+let headerStatus = false;
+let index = 0;
+
+header.addEventListener("mousedown", () => {
+  headerStatus = true;
+  console.log(headerStatus);
+});
+document.addEventListener("mouseup", () => {
+  headerStatus = false;
+  console.log(headerStatus);
+});
+header.addEventListener("mousemove", () => {
+  if (index < 4) {
+    index++;
+  } else {
+    index = 0;
+  }
+  if (headerStatus) {
+    for (let i = 0; i < carouselButtons.length; i++) {
+      carouselButtons[i].className = "";
+      carouselButtons[index].className = "active";
+
+      for (let o = 0; o < carouselSlides.length; o++) {
+        carouselSlides[o].className = "";
+        carouselSlides[index].className = "active";
+      }
+    }
+  }
+  headerStatus = false;
+});
