@@ -728,18 +728,10 @@ form label input {
     box-shadow: none;
   }
 
-  .contact-form input {
-    width: 90%;
-  }
-
   .message {
     display: flex;
     flex-flow: column;
     align-items: center;
-  }
-
-  .message textarea {
-    width: 90%;
   }
 
   .container div.content {
