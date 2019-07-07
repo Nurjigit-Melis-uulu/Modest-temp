@@ -229,7 +229,7 @@ header .controls {
   right: 105px;
   bottom: 30px;
   display: flex;
-  z-index: 9999;
+  z-index: 90;
 }
 
 .controls button {
