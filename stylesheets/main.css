@@ -229,6 +229,7 @@ header .controls {
   right: 105px;
   bottom: 30px;
   display: flex;
+  z-index: 9999;
 }
 
 .controls button {
@@ -761,10 +762,6 @@ form label input {
   .goal article {
     width: 100%;
   }
-
-  form label {
-    width: 100%;
-  }
 }
 
 @media (max-width: 600px) {
@@ -778,6 +775,15 @@ form label input {
 
   footer div {
     margin: 20px 0;
+  }
+
+  form label {
+    width: 100%;
+    align-items: flex-start;
+  }
+
+  .message {
+    align-items: flex-start;
   }
 }
 

@@ -3,7 +3,7 @@ let drawer = document.querySelector("nav .drawer");
 let boll = false;
 let backDrop = document.querySelector(".back-drop");
 let carouselSlides = document.querySelectorAll("header ul li");
-let carouselButtons = document.querySelectorAll("header .controls button");
+let carouselButtons = document.querySelectorAll(".controls button");
 const anchors = document.querySelectorAll('a[href*="#"]');
 const workLinks = document.querySelectorAll('a[href*="?work_"]');
 const links = document.querySelectorAll(".nav-box a");
