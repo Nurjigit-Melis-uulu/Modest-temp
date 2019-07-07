@@ -530,6 +530,8 @@ img {
   align-items: center;
   background: rgba(0, 0, 0, 0.5);
   transition: opacity .6s;
+  text-decoration: none;
+  color: white;
 }
 
 .work-hover i {
@@ -616,6 +618,11 @@ h2.header_contact_title {
 .contact-info {
   width: 50%;
   min-width: 300px;
+}
+
+.contact-info h3 {
+  margin-left: 10px;
+  color: black;
 }
 
 .contact-form {
