@@ -127,7 +127,7 @@ nav .back-drop {
   z-index: 10;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 950px) {
   nav ul {
     display: none;
   }
