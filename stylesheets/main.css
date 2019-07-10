@@ -455,6 +455,7 @@ header section>div {
   background: #E1E6EA;
   box-sizing: border-box;
   padding: 15px;
+  text-transform: uppercase;
 }
 
 .info h4,
