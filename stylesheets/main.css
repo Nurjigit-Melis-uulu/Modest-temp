@@ -237,7 +237,7 @@ header .controls {
   height: 14px;
   border: 2px solid white;
   background: transparent;
-  border-radius: 100%;
+  border-radius: 50%;
   outline: none;
   margin: 0 2px;
   transition: background .4s;
