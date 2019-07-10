@@ -238,9 +238,12 @@ header .controls {
   border: 2px solid white;
   background: transparent;
   border-radius: 50%;
+  box-sizing: border-box;
   outline: none;
   margin: 0 2px;
   transition: background .4s;
+  padding: 5px;
+
 }
 
 .controls button.active {
