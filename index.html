@@ -13,6 +13,7 @@
   <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700,600' rel='stylesheet' type='text/css'>
   <link href='http://fonts.googleapis.com/css?family=Quattrocento+Sans:400,700' rel='stylesheet' type='text/css'>
   <link rel="shortcut icon" href="./images/fav.png" type="image/x-icon">
+  <link rel="stylesheet" href="./stylesheets/swiper.min.css">
 </head>
 
 <body>
@@ -81,36 +82,17 @@
 
   <div class="container">
     <header>
-      <ul class="carousel">
-        <li class="active">
-          <div class="bg-1"></div>
-        </li>
-        <li>
-          <div class="bg-2"></div>
-        </li>
-        <li>
-          <div class="bg-3"></div>
-        </li>
-      </ul>
-      <div class="header-content">
-        <div class="box">
-          <section>
-            <h1>Welcome to our marketplace</h1>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nisi metus, tristique ndolor non, ornare
-              sagittis dolor. Nulla vestibulu lacus ...
-            </p>
-            <div>
-              <button class="btn">View more</button>
-              <button class="btn">Video tour</button>
-            </div>
-          </section>
+      <div class="swiper-container">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">Slide 1</div>
+          <div class="swiper-slide">Slide 2</div>
+          <div class="swiper-slide">Slide 3</div>
         </div>
-      </div>
-      <div class="controls">
-        <button class="active"></button>
-        <button></button>
-        <button></button>
+
+        <div class="swiper-pagination"></div>
+
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
       </div>
     </header>
     <div class="content" id="about">
@@ -539,6 +521,7 @@
     </div>
   </footer>
 
+  <script src="./scripts/swiper.min.js"></script>
   <script src="./scripts/main.js"></script>
 
 </body>

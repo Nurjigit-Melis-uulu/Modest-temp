@@ -169,116 +169,32 @@ header {
   width: 100%;
   height: 679px;
   position: relative;
-  background: linear-gradient(135deg, rgb(6, 2, 53), rgb(108, 107, 172))
 }
 
-header .carousel {
-  margin: 0;
-  padding: 0;
+.swiper-container {
   width: 100%;
   height: 100%;
-  position: relative;
-  list-style: none;
+
 }
 
-header .carousel li {
-  display: block;
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  left: 0;
-  top: 0;
-  opacity: 0;
-  transition: opacity .4s;
-}
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
 
-header .carousel li.active {
-  opacity: .6;
-}
-
-header .header-content {
-  max-width: var(--main-width);
-  height: 100%;
-  position: absolute;
-  left: calc(50% - (var(--main-width) / 2));
-  top: 0;
-  z-index: 90;
-}
-
-header .header-content .box {
-  width: 100%;
-  height: 100%;
+  /* Center slide text vertically */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
   display: flex;
-  justify-content: space-between;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
   align-items: center;
-  position: relative;
-}
-
-header .header-content section {
-  width: var(--main-content-left-width);
-  height: 145px;
-  color: white;
-}
-
-header .header-content section div {
-  margin: 25px 0 0;
-}
-
-header .controls {
-  position: absolute;
-  right: 105px;
-  bottom: 30px;
-  display: flex;
-  z-index: 90;
-}
-
-.controls button {
-  width: 14px;
-  height: 14px;
-  border: 2px solid white;
-  background: transparent;
-  border-radius: 50%;
-  box-sizing: border-box;
-  outline: none;
-  margin: 0 2px;
-  transition: background .4s;
-  padding: 5px;
-
-}
-
-.controls button.active {
-  background: white;
-}
-
-header div[class^="bg-"] {
-  background-size: cover;
-  background-position: center;
-  width: 100%;
-  height: 100%;
-}
-
-.bg-1 {
-  background: url(../images/bg-3.jpg);
-}
-
-.bg-2 {
-  background: url(../images/bg-2.jpg);
-}
-
-.bg-3 {
-  background: url(../images/bg-1.jpg);
-}
-
-header h1 {
-  margin: -31px 0 0;
-}
-
-header p {
-  line-height: 27px;
-}
-
-header section>div {
-  display: flex;
 }
 
 .btn {
